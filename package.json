@@ -7,12 +7,18 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Bondarenko Ilya",
+< feature/06-express-server
+
 < feature/05-express-server
+> main
   "license": "ISC",
   "dependencies": {
     "express": "^4.21.1"
   }
+< feature/06-express-server
+
 
   "license": "ISC"
+> main
 > main
 }

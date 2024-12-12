@@ -1,3 +1,20 @@
+< feature/06-express-server
+const express = require('express')
+const productRoutes = require('./product.routes');
+const { logRequest } = require('./middleware');
+const { errorResponder } = require('./error.middleware');
+
+const app = express();
+const PORT = 3000;
+
+app.use(logRequest);
+app.use(productRoutes);
+app.use(errorResponder);
+
+app.listen(PORT, () => {
+  console.log(`Server listening at http://localhost:${PORT}`);
+});
+
 < feature/05-express-server
 const express = require('express');
 const app = express();
@@ -49,4 +66,5 @@ const server = http.createServer((req, res) => {
 server.listen(port, () => {
  console.log(`server start at http://localhost:${port}/`);
 });
+> main
 > main
